@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+    id="com.siteforum.plugins.geofencing"
+    version="0.0.1">
+    <name>Geofencing</name>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Geofencing">
+                <param name="ios-package" value="Geofencing" />
+            </feature>
+        </config-file>
+        <js-module src="www/Geofencing.js" name="Geofencing">
+            <clobbers target="Geofencing" />
+        </js-module>
+        <header-file src="src/ios/Geofencing.h" />
+         <source-file src="src/ios/Geofencing.m" />
+         <header-file src="src/ios/GeofencingHelper.h" />
+         <source-file src="src/ios/GeofencingHelper.m" />
+         
+         <!-- framework src="Foundation.framework" / -->
+         <!-- framework src="CoreLocation.framework" / -->
+         <!-- framework src="MapKit.framework" / -->
+    </platform>
+</plugin>
